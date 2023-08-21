@@ -1,0 +1,93 @@
+.scrolltable {
+	border-collapse: collapse;
+}
+
+.body .scrolltable td,
+th {
+	width: 20px;
+	height: 50px;
+	text-align: center;
+	border: 1px solid #ccc;
+}
+
+.scroll-container {
+	height: 250px;
+	overflow: auto;
+	position: absolute;
+	margin-left: 45%;
+	font-size: 20px;
+}
+
+.create-container {
+	margin-left: 10%;
+	float: left;
+}
+
+.create-container input {
+	width: 300px;
+	font-size: 16px;
+	margin-top: 5%;
+	margin-left: 5%;
+	padding: 10px;
+}
+
+label {
+	font-size: 20px;
+}
+
+.scrolltable thead {
+	position: sticky;
+	top: 0px;
+	background-color: #6a24fe;
+	color: white;
+}
+
+.scroll-container .scrolltable {
+	overflow-y: scroll;
+}
+
+.scrolltable tbody td:nth-child(2) {
+	background-color: #bbdefb;
+}
+
+.scrolltable tbody td:nth-child(1) {
+	width: 50px;
+}
+
+.scrolltable tbody td:nth-child(2) {
+	width: 70px;
+}
+
+.scrolltable tbody td:nth-child(3) {
+	width: 100px;
+}
+
+.scrolltable tbody td:nth-child(4) {
+	width: 150px;
+}
+
+.scrolltable tbody td:nth-child(5) {
+	width: 150px;
+}
+
+.create-button {
+	font-size: 40px;
+	padding: 20px 20px;
+	margin-top: 30%;
+	background-color: #6a24fe;
+	color: white;
+	cursor: pointer;
+}
+
+.table-button {
+	float: right;
+	margin-top: 19%;
+	margin-right: 10%;
+}
+
+.table-button input {
+	color: white;
+	background-color: #6a24fe;
+	font-size: 16px;
+	padding: 3px 5px;
+}
