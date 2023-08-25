@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +21,7 @@
 	<div class="container">
 		<div class="head">
 			<h1>
-				<p>BANKERS | ì˜ì—…íŒ€</p>
+				<p>BANKERS | ¿µ¾÷ÆÀ</p>
 			</h1>
 			<nav>
 				<ul>
@@ -27,7 +29,7 @@
 						<a>USER</a>
 					</li>
 					<li>
-						<a href="user.html">ë¡œê·¸ì•„ì›ƒ</a>
+						<a href="user.html">·Î±×¾Æ¿ô</a>
 
 					</li>
 				</ul>
@@ -35,20 +37,20 @@
 		</div>
 		<div class="sidebar">
 			<div class="btn-group">
-				<button onclick="window.location.href='newcustumer.html'">ì‹ ê·œ ê³ ê°</button>
-				<button onclick="window.location.href='customermanagement.html'">ê¸°ì¡´ ê³ ê° ê´€ë¦¬</button>
-				<button onclick="window.location.href='employeemanagent.html'">ì˜ì—… ì‚¬ì› ê´€ë¦¬</button>
+				<button onclick="window.location.href='newcustumer.html'">½Å±Ô °í°´</button>
+				<button onclick="window.location.href='customermanagement.html'">±âÁ¸ °í°´ °ü¸®</button>
+				<button onclick="window.location.href='employeemanagent.html'">¿µ¾÷ »ç¿ø °ü¸®</button>
 			</div>
 		</div>
 		<div class="body">
-			<button onclick="window.location.href='newcustumer.html'">ì‹ ê·œ ê³ ê°</button>
-			<button onclick="window.location.href='customermanagement.html'">ê¸°ì¡´ ê³ ê° ê´€ë¦¬</button>
-			<input type="text" placeholder="ê³ ê° ëª…">
+			<button onclick="window.location.href='newcustumer.html'">½Å±Ô °í°´</button>
+			<button onclick="window.location.href='customermanagement.html'">±âÁ¸ °í°´ °ü¸®</button>
+			<input type="text" placeholder="°í°´ ¸í">
 		</div>
 	</div>
 	<div class="footer">
 		<p>BANKERS. fisabankers@gmail.com tel.010-XXXX-XXXX</p>
-		<p>ì„œìš¸íŠ¹ë³„ì‹œ ë§ˆí¬êµ¬ ì›”ë“œì»µë¶ë¡œ 434 (ìƒì•”ë™, ìƒì•” IT Tower 6ì¸µ)</p>
+		<p>¼­¿ïÆ¯º°½Ã ¸¶Æ÷±¸ ¿ùµåÄÅºÏ·Î 434 (»ó¾Ïµ¿, »ó¾Ï IT Tower 6Ãþ)</p>
 	</div>
 	</div>
 </body>
