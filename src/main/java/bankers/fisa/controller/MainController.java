@@ -35,9 +35,7 @@ public class MainController {
 		
 		ModelAndView mv = new ModelAndView();
 
-		System.out.println("들어옴");
 		if(!login(id, pw)) {
-			System.out.println("로그인 틀림");
 			mv.setViewName("fail");
 			return mv;
 		}
@@ -53,7 +51,7 @@ public class MainController {
 		return mv;
 	
 	}
-	//김건영 박상건 8888
+	
 	private boolean login(String id, String pw) {
 		URI uri = UriComponentsBuilder.fromUriString("http://localhost:7070")
 				.path("/center/login")
