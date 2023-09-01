@@ -1,13 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BANKERS</title>
-	<link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico">
 	<link rel="stylesheet" href="../css/body.css">
 	<link rel="stylesheet" href="../css/footer.css">
 	<link rel="stylesheet" href="../css/hearder.css">
@@ -20,37 +19,37 @@
 
 	<div class="container">
 		<div class="head">
-			<h1>
-				<p>BANKERS | ¿µ¾÷ÆÀ</p>
-			</h1>
+			<h1>BANKERS | ì˜ì—…íŒ€</h1>
 			<nav>
 				<ul>
-					<li>
-						<a>USER</a>
-					</li>
-					<li>
-						<a href="user.html">·Î±×¾Æ¿ô</a>
-
-					</li>
+					<li><a>USER</a></li>
+					<li><a href="/">ë¡œê·¸ì•„ì›ƒ</a></li>
 				</ul>
 			</nav>
 		</div>
 		<div class="sidebar">
 			<div class="btn-group">
-				<button onclick="window.location.href='newcustumer.html'">½Å±Ô °í°´</button>
-				<button onclick="window.location.href='customermanagement.html'">±âÁ¸ °í°´ °ü¸®</button>
-				<button onclick="window.location.href='employeemanagent.html'">¿µ¾÷ »ç¿ø °ü¸®</button>
+				<button onclick="window.location.href='newcustumer.html'">ì‹ ê·œ
+					ê³ ê°</button>
+				<button onclick="window.location.href='customermanagement.html'">ê¸°ì¡´
+					ê³ ê° ê´€ë¦¬</button>
+				<button onclick="window.location.href='employeemanagent.html'">ì˜ì—…
+					ì‚¬ì› ê´€ë¦¬</button>
 			</div>
 		</div>
 		<div class="body">
-			<button onclick="window.location.href='newcustumer.html'">½Å±Ô °í°´</button>
-			<button onclick="window.location.href='customermanagement.html'">±âÁ¸ °í°´ °ü¸®</button>
-			<input type="text" placeholder="°í°´ ¸í">
+			<div class="center-container">
+				<button class="button" onclick="window.location.href='newcustomer'">ì‹ ê·œ ê³ ê°</button>
+				<form action="/retaincustomer" method="get" class="formsubmit">
+					<button type="submit" class="button">ê¸°ì¡´ ê³ ê°</button>
+					<input type="text" name="companyName" placeholder="íšŒì‚¬ ì´ë¦„" required>
+				</form>
+			</div>
 		</div>
 	</div>
 	<div class="footer">
 		<p>BANKERS. fisabankers@gmail.com tel.010-XXXX-XXXX</p>
-		<p>¼­¿ïÆ¯º°½Ã ¸¶Æ÷±¸ ¿ùµåÄÅºÏ·Î 434 (»ó¾Ïµ¿, »ó¾Ï IT Tower 6Ãþ)</p>
+		<p>ì„œìš¸íŠ¹ë³„ì‹œ ë§ˆí¬êµ¬ ì›”ë“œì»µë¶ë¡œ 434 (ìƒì•”ë™, ìƒì•” IT Tower 6ì¸µ)</p>
 	</div>
 	</div>
 </body>
