@@ -120,38 +120,38 @@
 								<tr>
 									<td><label>회사 법인명</label></td>
 									<td><input type="text" name="companyname"
-										value="${companyname}" required /></td>
+										value="${companyname}" readonly /></td>
 								</tr>
 								<tr>
 									<td><label for="id">회사 이메일</label></td>
 									<td><input id="id" type="text" name="companyEmail"
-										value="${companyEmail}" required /></td>
+										value="${companyEmail}" readonly /></td>
 								</tr>
 								<tr>
 									<td><label for="id">회사 주소</label></td>
 									<td><input id="id" type="text" name="companyAddress"
-										value="${companyAddress}" required /></td>
+										value="${companyAddress}" readonly /></td>
 								</tr>
 								<tr>
 									<td><label for="password">회사 번호</label></td>
 									<td><input id="password" type="text" name="companyNumber"
-										value="${companyNumber}" required /></td>
+										value="${companyNumber}" readonly /></td>
 								</tr>
 								<tr>
 									<td><label for="phone-number">대표 번호</label></td>
 									<td><input id="phone-number" name="phoneNumber" type="tel"
-										placeholder="010-xxxx-xxxx" value="${phoneNumber}" /></td>
+										placeholder="010-xxxx-xxxx" value="${phoneNumber} " readonly/></td>
 								</tr>
 
 								<tr>
 									<td><label for="confirmed-password">회사 명</label></td>
 									<td><input id="confirmed-password" type="text"
-										name="company" value="${company}" /></td>
+										name="company" value="${company}" readonly/></td>
 								</tr>
 								<tr>
 									<td><label for="email">회사 크래딧</label></td>
 									<td><input id="email" name="credits"
-										value="${custtotalcredit}" /></td>
+										value="${custtotalcredit}" readonly/></td>
 								</tr>
 							</table>
 							<div class="card-body">
