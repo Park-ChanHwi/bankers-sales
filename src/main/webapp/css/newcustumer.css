@@ -1,130 +1,49 @@
-.scrolltable {
-	border-collapse: collapse;
+.position-input,
+.id-input,
+.password-input,
+.email-input {
+	width: 100%;
+	/* 최대 너비 설정 */
+	border: none;
+	/* 테두리 없음 */
+	outline: none;
+	/* 포커스 효과 제거 */
 }
 
-.scrolltable thead {
-	position: sticky;
-	top: 0px;
-	background-color: #FFD7B4;
+.create-button {
+	float: right;
+	width: 20%;
+	height: 100%;
+	border-radius: 20px;
+	background-color: #92a1ff;
+	font-weight: bold;
 }
 
-.scroll-container .scrolltable {
-	overflow-y: scroll;
-}
-
-label {
-	font-size: 20px;
-}
-
-.body .scrolltable td,
-th {
-	width: 20px;
-	height: 50px;
-	text-align: center;
-	border: 1px solid #ccc;
-}
-
-.scroll-container {
-	height: 250px;
-	width: 1000px;
-	overflow: auto;
-	position: absolute;
-	margin-left: 35%;
-	font-size: 20px;
-}
-
-.create-container {
-	margin-left: 5%;
+#addRowButton {
+	background-color: #92a1ff;
+	font-weight: bold;
 	float: left;
+	margin-bottom: 1%;
+}
+
+.text {
+	background-color: #4e73df;
+	display: inline-block;
+	padding: 0.375rem 0.75rem;
+}
+
+.create-container label {
+	font-size: 20px;
+	margin-top: 1.5%;
+	margin-left: 15%;
 }
 
 .create-container input {
-	width: 300px;
-	font-size: 16px;
-	margin-top: 5%;
-	margin-left: 5%;
-	padding: 10px;
+	width: 150%;
+	margin-left: 15%;
 }
 
-.scrolltable tbody td:nth-child(2) {
-	background-color: #bbdefb;
-}
+.create-container td {
+	width: 200px;
 
-.scrolltable thead {
-	position: sticky;
-	top: 0px;
-	background-color: #6a24fe;
-	color: white;
-}
-
-.scroll-container .scrolltable {
-	overflow-y: scroll;
-}
-
-.scrolltable tbody td:nth-child(1) {
-	width: 50px;
-}
-
-.scrolltable tbody td:nth-child(2) {
-	width: 70px;
-	background-color: #bbdefb;
-}
-
-.scrolltable tbody td:nth-child(3) {
-	width: 100px;
-}
-
-.scrolltable tbody td:nth-child(4) {
-	width: 150px;
-}
-.scrolltable tbody td:nth-child(5) {
-	width: 250px;
-}
-.create-button {
-	font-size: 40px;
-	padding: 20px 20px;
-	margin-top: 30%;
-	background-color: #6a24fe;
-	color: white;
-	cursor: pointer;
-}
-
-.table-button {
-	float: right;
-	margin-top: 19%;
-	margin-right: 10%;
-}
-
-.table-button input {
-	color: white;
-	background-color: #6a24fe;
-	font-size: 16px;
-	padding: 3px 5px;
-}
-
-.position-input {
-	width: 100%;
-	height: 100%;
-	font-size: 16px;
-	padding-left: 7%;
-}
-
-.id-input {
-	height: 100%;
-	font-size: 20px;
-	padding-left: 7%;
-}
-
-.password-input {
-	height: 100%;
-	width: 100%;
-	font-size: 20px;
-	padding-left: 7%;
-}
-
-.email-input {
-	height: 100%;
-	width: 100%;
-	font-size: 18px;
-	padding-left: 7%;
 }

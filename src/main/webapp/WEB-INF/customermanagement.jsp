@@ -1,110 +1,181 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Header</title>
-<link rel="icon" type="image/x-icon"
-	href="../images/favicon/favicon.ico">
-<link rel="stylesheet" href="../css/body.css">
-<link rel="stylesheet" href="../css/footer.css">
-<link rel="stylesheet" href="../css/hearder.css">
-<link rel="stylesheet" href="../css/sidebar.css">
-<link rel="stylesheet" href="../css/style.css">
 
-<link rel="stylesheet" href="../css/customermanagement.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>BANKERS</title>
+
+<!-- Custom fonts for this template-->
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+	type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
+
+<!-- Custom styles for this template-->
+<link href="css/sb-admin-2.min.css" rel="stylesheet">
+<link href="css/newcustumer.css" rel="stylesheet">
+
 </head>
 
-<style>
-</style>
+<body id="page-top">
 
-<body>
+	<!-- Page Wrapper -->
+	<div id="wrapper">
 
-	<div class="container">
-		<div class="head">
-			<h1>
-				<p>BANKERS | ¿µ¾÷ÆÀ</p>
-			</h1>
-			<nav>
-				<ul>
-					<li><a>USER</a></li>
-					<li><a href="/">·Î±×¾Æ¿ô</a></li>
-				</ul>
-			</nav>
-		</div>
-		<div class="sidebar">
-			<div class="btn-group">
-				<button onclick="location.href='mainpage.html'">¸ŞÀÎ</button>
-				<button onclick="window.location.href='newcustumer.html'">½Å±Ô
-					°í°´</button>
-				<button onclick="window.location.href='employeemanagent.html'">¿µ¾÷
-					»ç¿ø °ü¸®</button>
-			</div>
-		</div>
-		<div class="body">
-			<h2>±âÁ¸ °í°´ °ü¸®</h2>
+		<!-- Sidebar -->
+		<ul
+			class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+			id="accordionSidebar">
 
-			<table class="create-container">
-				<tr>
-					<td><label>È¸»ç ¹ıÀÎ¸í</label></td>
-					<td><input type="text" name="companyname"
-						value="${companyname}" required /></td>
-				</tr>
-				<tr>
-					<td><label for="id">È¸»ç ÀÌ¸ŞÀÏ</label></td>
-					<td><input id="id" type="text" name="companyEmail"
-						value="${companyEmail}" required /></td>
-				</tr>
-				<tr>
-					<td><label for="id">È¸»ç ÁÖ¼Ò</label></td>
-					<td><input id="id" type="text" name="companyAddress"
-						value="${companyAddress}" required /></td>
-				</tr>
-				<tr>
-					<td><label for="password">È¸»ç ¹øÈ£</label></td>
-					<td><input id="password" type="text" name="companyNumber"
-						value="${companyNumber}" required /></td>
-				</tr>
-				<tr>
-					<td><label for="phone-number">´ëÇ¥ ¹øÈ£</label></td>
-					<td><input id="phone-number" name="phoneNumber" type="tel"
-						placeholder="010-xxxx-xxxx" value="${phoneNumber}" /></td>
-				</tr>
+			<!-- Sidebar - Brand -->
+			<a
+				class="sidebar-brand d-flex align-items-center justify-content-center"
+				href="/dashboard">
+				<div class="sidebar-brand-icon rotate-n-15">
+					<i class="fas fa-laugh-wink"></i>
+				</div>
+				<div class="sidebar-brand-text mx-3">Bankers</div>
+			</a>
 
-				<tr>
-					<td><label for="confirmed-password">È¸»ç ¸í</label></td>
-					<td><input id="confirmed-password" type="text" name="company" value="${company}" /></td>
-				</tr>
-				<tr>
-					<td><label for="email">È¸»ç Å©·¡µ÷</label></td>
-					<td><input id="email" name="credits" value="${custtotalcredit}" /></td>
-				</tr>
-			</table>
-			<div class="scroll-container">
-				<table class="scrolltable" id="custTable">
-					<thead>
-						<th scope="col">¹øÈ£</th>
-						<th scope="col">Á÷Ã¥</th>
-						<th scope="col">ID</th>
-						<th scope="col">PW</th>
-						<th scope="col">ÀÌ¸ŞÀÏ</th>
-					</thead>
-					<tbody>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
-	<div class="footer">
-		<p>BANKERS. fisabankers@gmail.com tel.010-XXXX-XXXX</p>
-		<p>¼­¿ïÆ¯º°½Ã ¸¶Æ÷±¸ ¿ùµåÄÅºÏ·Î 434 (»ó¾Ïµ¿, »ó¾Ï IT Tower 6Ãş)</p>
-	</div>
-	<script>
+			<!-- Divider -->
+			<hr class="sidebar-divider my-0">
+
+			<!-- Nav Item - Dashboard -->
+			<li class="nav-item active"><a class="nav-link"
+				href="/dashboard"> <i class="fas fa-fw fa-tablet-alt"></i> <span>ë©”ì¸</span></a>
+			</li>
+
+			<!-- Nav Item - Dashboard -->
+			<li class="nav-item active"><a class="nav-link"
+				href="/newcustomer"> <i class="fas fa-fw fa-tachometer-alt"></i>
+					<span>ì‹ ê·œ ê³ ê°</span></a></li>
+
+			<!-- Divider -->
+			<hr class="sidebar-divider">
+		</ul>
+		<!-- End of Sidebar -->
+
+		<!-- Content Wrapper -->
+		<div id="content-wrapper" class="d-flex flex-column">
+
+			<!-- Main Content -->
+			<div id="content">
+
+				<!-- Topbar -->
+				<nav
+					class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+					<!-- Sidebar Toggle (Topbar) -->
+					<button id="sidebarToggleTop"
+						class="btn btn-link d-md-none rounded-circle mr-3">
+						<i class="fa fa-bars"></i>
+					</button>
+
+					<!-- Page Heading -->
+					<h1 class="h3 mb-0 text-gray-800">ì‹ ê·œê³ ê°</h1>
+
+					<!-- Topbar Navbar -->
+					<ul class="navbar-nav ml-auto">
+						<div class="topbar-divider d-none d-sm-block"></div>
+						<!-- Nav Item - User Information -->
+						<li class="nav-item dropdown no-arrow"><a
+							class="nav-link dropdown-toggle" href="#" id="userDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <span
+								class="mr-2 d-none d-lg-inline text-gray-600 small">${id}ê¹€ê±´ì˜</span>
+								<img class="img-profile rounded-circle"
+								src="img/undraw_profile.svg">
+						</a> <!-- Dropdown - User Information -->
+							<div
+								class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								aria-labelledby="userDropdown">
+								<a class="dropdown-item" href="#" data-toggle="modal"
+									data-target="#logoutModal"> <i
+									class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+									ë¡œê·¸ì•„ì›ƒ
+								</a>
+							</div></li>
+					</ul>
+				</nav>
+				<!-- End of Topbar -->
+
+				<div class="container-fluid">
+					<!-- DataTales Example -->
+					<div class="card shadow mb-4">
+						<div class="card-header py-3">
+							<h6 class="m-0 font-weight-bold text-primary">ì‹ ê·œ ê³ ê° ì¶”ê°€</h6>
+						</div>
+						<form>
+							<table class="create-container">
+								<tr>
+									<td><label>íšŒì‚¬ ë²•ì¸ëª…</label></td>
+									<td><input type="text" name="companyname"
+										value="${companyname}" required /></td>
+								</tr>
+								<tr>
+									<td><label for="id">íšŒì‚¬ ì´ë©”ì¼</label></td>
+									<td><input id="id" type="text" name="companyEmail"
+										value="${companyEmail}" required /></td>
+								</tr>
+								<tr>
+									<td><label for="id">íšŒì‚¬ ì£¼ì†Œ</label></td>
+									<td><input id="id" type="text" name="companyAddress"
+										value="${companyAddress}" required /></td>
+								</tr>
+								<tr>
+									<td><label for="password">íšŒì‚¬ ë²ˆí˜¸</label></td>
+									<td><input id="password" type="text" name="companyNumber"
+										value="${companyNumber}" required /></td>
+								</tr>
+								<tr>
+									<td><label for="phone-number">ëŒ€í‘œ ë²ˆí˜¸</label></td>
+									<td><input id="phone-number" name="phoneNumber" type="tel"
+										placeholder="010-xxxx-xxxx" value="${phoneNumber}" /></td>
+								</tr>
+
+								<tr>
+									<td><label for="confirmed-password">íšŒì‚¬ ëª…</label></td>
+									<td><input id="confirmed-password" type="text"
+										name="company" value="${company}" /></td>
+								</tr>
+								<tr>
+									<td><label for="email">íšŒì‚¬ í¬ë˜ë”§</label></td>
+									<td><input id="email" name="credits"
+										value="${custtotalcredit}" /></td>
+								</tr>
+							</table>
+							<div class="card-body">
+								<div class="table-responsive">
+									<table id="custTable" class="table table-bordered" width="100%"
+										cellspacing="0">
+										<thead>
+											<tr>
+												<th>ë²ˆí˜¸</th>
+												<th>ì§ì±…</th>
+												<th>ID</th>
+												<th>PW</th>
+												<th>ì´ë©”ì¼</th>
+											</tr>
+										</thead>
+										<tbody>
+
+										</tbody>
+									</table>
+
+								</div>
+
+
+								<script>
 		var number = decode("${number}");
 		var custnumber = decode("${custnumber}");
 		var custpos = decode("${custpos}");
@@ -142,6 +213,31 @@
 			return strsplit;
 		}
 	</script>
+								
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<!-- /.container-fluid -->
+
+		</div>
+		<!-- End of Main Content -->
+
+		<!-- Footer -->
+		<footer class="sticky-footer bg-footer">
+			<div class="container my-auto">
+				<div class="copyright text-center my-auto">
+					<span>BANKERS. bankersfisa@gmail.com tel.010-XXXX-XXXX</span><br>
+					<span>ì„œìš¸íŠ¹ë³„ì‹œ ë§ˆí¬êµ¬ ì›”ë“œì»µë¶ë¡œ 434 (ìƒì•”ë™, ìƒì•” IT Tower 6ì¸µ)</span><br>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	</div>
+
 </body>
 
 </html>

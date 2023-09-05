@@ -1,18 +1,55 @@
-.container .body button {
-	width: 25%;
-	height: 25%;
+.body {
+	display: inline-block;
+	/* inline-block으로 변경 */
+	text-align: center;
+	/* 내부 컨텐츠 중앙 정렬 */
+	border: 2px solid #000;
+	/* 보더 추가 */
+	padding: 50px;
+	/* 내부 컨텐츠와 보더 간격을 조절 */
+	margin-left: 20%;
+	margin-top: 10%;
+	box-shadow: 0 .35rem 2rem 0 rgba(58, 59, 69, .15) !important;
+}
+
+
+
+.container1,
+.container2 {
+	width: 300px;
+	/* 버튼 가로 크기 조정 */
+	height: 200px;
+	/* 버튼 세로 크기 조정 */
 	font-weight: bold;
-	display: block;
-	float: left;
-	margin-left: 15%;
-	margin-top: 15%;
 	font-size: 24px;
 	background-color: #92a1ff;
+	margin: 25px;
+	border-radius: 30px;
+	/* 버튼 간격 조정 */
+
 }
-.container .body input {
+
+.formbtn {
+	text-align: center;
+	/* 세로 배치된 요소들을 가운데 정렬 */
 	float: right;
-	margin-right: 20%;
-	width: 25%;
-	height: 5%;
+}
+
+.formbtn .container {
+
+	display: block;
+	/* 블록 요소로 변경하여 세로 배치 */
+
+}
+
+.formbtn input {
+	width: 300px;
+	/* 입력 필드 가로 크기 조정 */
+	height: 40px;
+	/* 입력 필드 세로 크기 조정 */
 	font-size: 20px;
+	margin: 10px auto;
+	/* 입력 필드 가운데 정렬 및 위아래 간격 조정 */
+	display: block;
+	/* 블록 요소로 변경하여 세로 배치 */
 }

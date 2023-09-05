@@ -1,57 +1,171 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>BANKERS</title>
-	<link rel="stylesheet" href="../css/body.css">
-	<link rel="stylesheet" href="../css/footer.css">
-	<link rel="stylesheet" href="../css/hearder.css">
-	<link rel="stylesheet" href="../css/sidebar.css">
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../css/mainpage.css">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>BANKERS</title>
+
+<!-- Custom fonts for this template-->
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+	type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
+
+<!-- Custom styles for this template-->
+<link href="css/sb-admin-2.min.css" rel="stylesheet">
+<link href="css/mainpage.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body id="page-top">
 
-	<div class="container">
-		<div class="head">
-			<h1>BANKERS | 영업팀</h1>
-			<nav>
-				<ul>
-					<li><a>USER</a></li>
-					<li><a href="/">로그아웃</a></li>
-				</ul>
-			</nav>
-		</div>
-		<div class="sidebar">
-			<div class="btn-group">
-				<button onclick="window.location.href='newcustumer.html'">신규
-					고객</button>
-				<button onclick="window.location.href='customermanagement.html'">기존
-					고객 관리</button>
-				<button onclick="window.location.href='employeemanagent.html'">영업
-					사원 관리</button>
+	<!-- Page Wrapper -->
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<ul
+			class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+			id="accordionSidebar">
+
+			<!-- Sidebar - Brand -->
+			<a
+				class="sidebar-brand d-flex align-items-center justify-content-center"
+				href="/dashboard">
+				<div class="sidebar-brand-icon rotate-n-15">
+					<i class="fas fa-laugh-wink"></i>
+				</div>
+				<div class="sidebar-brand-text mx-3">Bankers</div>
+			</a>
+
+
+			<hr class="sidebar-divider my-0">
+
+
+			<li class="nav-item active"><a class="nav-link" href="/login">
+					<i class="fas fa-fw fa-tablet-alt"></i> <span>메인</span>
+			</a></li>
+
+			<li class="nav-item active"><a class="nav-link"
+				href="/newcustomer"> <i class="fas fa-fw fa-tachometer-alt"></i>
+					<span>신규 고객</span></a></li>
+			<!-- Divider -->
+			<hr class="sidebar-divider">
+		</ul>
+		<!-- End of Sidebar -->
+
+		<!-- Content Wrapper -->
+		<div id="content-wrapper" class="d-flex flex-column">
+
+			<!-- Main Content -->
+			<div id="content">
+
+				<!-- Topbar -->
+				<nav
+					class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+					<!-- Sidebar Toggle (Topbar) -->
+					<button id="sidebarToggleTop"
+						class="btn btn-link d-md-none rounded-circle mr-3">
+						<i class="fa fa-bars"></i>
+					</button>
+
+					<!-- Page Heading -->
+					<h1 class="h3 mb-0 text-gray-800">Main</h1>
+
+					<!-- Topbar Navbar -->
+					<ul class="navbar-nav ml-auto">
+						<div class="topbar-divider d-none d-sm-block"></div>
+						<!-- Nav Item - User Information -->
+						<li class="nav-item dropdown no-arrow"><a
+							class="nav-link dropdown-toggle" href="#" id="userDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <span
+								class="mr-2 d-none d-lg-inline text-gray-600 small">${id}김건영</span>
+								<img class="img-profile rounded-circle"
+								src="img/undraw_profile.svg">
+						</a> <!-- Dropdown - User Information -->
+							<div
+								class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								aria-labelledby="userDropdown">
+								<a class="dropdown-item" href="#" data-toggle="modal"
+									data-target="#logoutModal"> <i
+									class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+									로그아웃
+								</a>
+							</div></li>
+					</ul>
+				</nav>
+				<!-- End of Topbar -->
+				<div class="body">
+
+					<button class="container1"
+						onclick="window.location.href='newcustomer'">신규 고객</button>
+					<div class="formbtn">
+						<form action="/retaincustomer" method="get" class="formsubmit">
+							<button type="submit" class="container2">기존 고객</button>
+							<input type="text" name="companyName" placeholder="회사 이름"
+								required>
+						</form>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="body">
-			<div class="center-container">
-				<button class="button" onclick="window.location.href='newcustomer'">신규 고객</button>
-				<form action="/retaincustomer" method="get" class="formsubmit">
-					<button type="submit" class="button">기존 고객</button>
-					<input type="text" name="companyName" placeholder="회사 이름" required>
-				</form>
+			<!-- /.container-fluid -->
+
+
+			<!-- End of Main Content -->
+
+			<!-- Footer -->
+			<footer class="sticky-footer bg-footer">
+				<div class="container my-auto">
+					<div class="copyright text-center my-auto">
+						<span>BANKERS. bankersfisa@gmail.com tel.010-XXXX-XXXX</span><br>
+						<span>서울특별시 마포구 월드컵북로 434 (상암동, 상암 IT Tower 6층)</span><br>
+					</div>
+				</div>
+			</footer>
+			<!-- Logout Modal-->
+			<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+				aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">로그아웃 하시겠습니까?</h5>
+							<button class="close" type="button" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
+						<div class="modal-body">"로그아웃" 버튼을 선택하시면 현재 세션이 종료됩니다.</div>
+						<div class="modal-footer">
+							<button class="btn btn-secondary" type="button"
+								data-dismiss="modal">취소</button>
+							<a class="btn btn-primary" href="/">로그아웃</a>
+						</div>
+					</div>
+				</div>
 			</div>
+			<!-- Bootstrap core JavaScript-->
+			<script src="vendor/jquery/jquery.min.js"></script>
+			<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+			<!-- Core plugin JavaScript-->
+			<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+			<!-- Custom scripts for all pages-->
+			<script src="js/sb-admin-2.js"></script>
+
 		</div>
+
 	</div>
-	<div class="footer">
-		<p>BANKERS. fisabankers@gmail.com tel.010-XXXX-XXXX</p>
-		<p>서울특별시 마포구 월드컵북로 434 (상암동, 상암 IT Tower 6층)</p>
-	</div>
-	</div>
+
 </body>
 
 </html>

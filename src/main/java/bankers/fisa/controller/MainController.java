@@ -21,6 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @RestController
@@ -32,14 +33,15 @@ public class MainController {
 		mv.setViewName("index");
 		return mv;
 	}
-	
+
+
 	@PostMapping("/login")
 	public ModelAndView loginPage(@RequestParam("loginID") String id, @RequestParam("loginPW") String pw,
 			HttpServletResponse response) {
 		System.out.println("salesLogin 실행");
 		ModelAndView mv = new ModelAndView();
 		if (!login(id, pw)) {
-			mv.setViewName("index");
+			mv.setViewName("error");
 			return mv;
 		}
 		
@@ -446,3 +448,4 @@ public class MainController {
 		return mv;
 	}
 }
+
