@@ -52,7 +52,7 @@ public class MainController {
 		
 		Cookie cookie = new Cookie("id", id);
 		
-		String domain = "localhost";
+		String domain = "192.168.0.178";
 		
 		try {
             Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
@@ -63,7 +63,6 @@ public class MainController {
                     InetAddress inetAddress = inetAddresses.nextElement();
                     if (!inetAddress.isLoopbackAddress() && !inetAddress.isLinkLocalAddress() && inetAddress.isSiteLocalAddress()) {
                         System.out.println("내 IP 주소: " + inetAddress.getHostAddress());
-                        domain = inetAddress.getHostAddress();
                     }
                 }
             }
