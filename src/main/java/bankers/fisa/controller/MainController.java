@@ -52,7 +52,7 @@ public class MainController {
 		
 		Cookie cookie = new Cookie("id", id);
 		
-		String domain = "192.168.0.178";
+		String domain = "192.168.0.72";
 		
 		try {
             Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
