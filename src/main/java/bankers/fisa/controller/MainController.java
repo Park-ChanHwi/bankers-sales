@@ -1,9 +1,14 @@
 package bankers.fisa.controller;
 
 
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
 import java.net.URI;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Enumeration;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -46,10 +51,31 @@ public class MainController {
 		}
 		
 		Cookie cookie = new Cookie("id", id);
-		cookie.setDomain("localhost");
+		
+		String domain = "localhost";
+		
+		try {
+            Enumeration<NetworkInterface> networkInterfaces = NetworkInterface.getNetworkInterfaces();
+            while (networkInterfaces.hasMoreElements()) {
+                NetworkInterface networkInterface = networkInterfaces.nextElement();
+                Enumeration<InetAddress> inetAddresses = networkInterface.getInetAddresses();
+                while (inetAddresses.hasMoreElements()) {
+                    InetAddress inetAddress = inetAddresses.nextElement();
+                    if (!inetAddress.isLoopbackAddress() && !inetAddress.isLinkLocalAddress() && inetAddress.isSiteLocalAddress()) {
+                        System.out.println("내 IP 주소: " + inetAddress.getHostAddress());
+                        domain = inetAddress.getHostAddress();
+                    }
+                }
+            }
+        } catch (SocketException e) {
+            e.printStackTrace();
+        }
+		
+		cookie.setDomain(domain);
 		cookie.setPath("/");
 		cookie.setMaxAge(30 * 60);
-		cookie.setSecure(true);
+		cookie.setSecure(false);
+		cookie.setHttpOnly(false);
 		response.addCookie(cookie);
 		
 		mv.setViewName("mainpage");

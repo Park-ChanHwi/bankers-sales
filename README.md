@@ -1,4 +1,2 @@
 # bankers-sales
-git start<br>
-HaedamLee is commin<br>
-godgunyoungstart<br>
+version 0.1
